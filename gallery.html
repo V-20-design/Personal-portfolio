@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Victoria Mwende</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Victoria</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="childhood.html">Childhood</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="future.html">Future</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>My Photo Gallery</h1>
+            <p>A visual journey through my life, studies, and experiences</p>
+        </div>
+    </header>
+
+    <!-- Gallery Content -->
+    <section class="section gallery">
+        <div class="container">
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h2><i class="fas fa-cloud-upload-alt"></i> Upload Your Photos</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Drag & Drop Photos Here</h3>
+                    <p>or click to browse files</p>
+                    <input type="file" id="gallery-upload" accept="image/*" multiple style="display: none;">
+                    <label for="gallery-upload" class="btn upload-btn">
+                        <i class="fas fa-folder-open"></i> Choose Photos
+                    </label>
+                    <p class="upload-note">Supported formats: JPG, PNG, GIF | Max size: 5MB per photo</p>
+                </div>
+                <div class="upload-progress" id="uploadProgress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">Uploading...</p>
+                </div>
+            </div>
+
+            <!-- Gallery Categories -->
+            <div class="gallery-categories">
+                <div class="category-tabs">
+                    <button class="category-btn active" data-category="all">All Photos</button>
+                    <button class="category-btn" data-category="university">University Life</button>
+                    <button class="category-btn" data-category="meru">Meru Memories</button>
+                    <button class="category-btn" data-category="tech">Tech Projects</button>
+                    <button class="category-btn" data-category="personal">Personal</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Sample Photos (You'll replace these with your own) -->
+                <div class="gallery-item" data-category="meru">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1589552950456-75eeaf5c4f34?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Meru Landscape">
+                        <div class="gallery-overlay">
+                            <h4>Meru County</h4>
+                            <p>My beautiful hometown</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="university">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="University Campus">
+                        <div class="gallery-overlay">
+                            <h4>Kirinyaga University</h4>
+                            <p>Where I study Software Engineering</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="tech">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Coding Session">
+                        <div class="gallery-overlay">
+                            <h4>Coding Session</h4>
+                            <p>Working on a software project</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="personal">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b786d4b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Personal Photo">
+                        <div class="gallery-overlay">
+                            <h4>Personal Moment</h4>
+                            <p>Enjoying Kenyan culture</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More photos will be added here through uploads -->
+                <div class="gallery-item empty" id="uploadPrompt">
+                    <div class="empty-gallery">
+                        <i class="fas fa-plus-circle"></i>
+                        <h4>Add Your Photos</h4>
+                        <p>Upload your own memories to see them here</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Modal -->
+            <div class="photo-modal" id="photoModal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <img id="modalImage" src="" alt="Full Size Photo">
+                    <div class="modal-info">
+                        <h3 id="modalTitle">Photo Title</h3>
+                        <p id="modalDescription">Photo description goes here</p>
+                        <div class="modal-actions">
+                            <button class="btn" id="downloadBtn"><i class="fas fa-download"></i> Download</button>
+                            <button class="btn" id="deleteBtn"><i class="fas fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Victoria Mwende</a>
+                    <p>Software Engineering Student | Kirinyaga University</p>
+                    <div class="footer-identity">
+                        <p><i class="fas fa-map-marker-alt"></i> Meru County, Kenya</p>
+                        <p><i class="fas fa-birthday-cake"></i> Born: 2005</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="education.html">My Education</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/V-20-design" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/victoria-mwende" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com/victoria.mwende" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2024</span> Victoria Mwende. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

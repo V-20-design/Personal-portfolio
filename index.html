@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria Mwende | Personal Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Victoria</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="childhood.html">Childhood</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="future.html">Future</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hello, I'm <span class="highlight">Victoria Mwende</span></h1>
+                <p class="hero-subtitle">Software Engineering Student & Tech Enthusiast</p>
+                <p class="hero-text">Born and raised in Meru County,went to Nakuru girls national school, currently pursuing my passion for technology at Kirinyaga University as a second-year Software Engineering student. Welcome to my journey from childhood dreams to future aspirations.</p>
+                <a href="#about" class="btn">Discover My Story <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder" id="profile-image-container">
+                    <i class="fas fa-user-circle" id="default-profile-icon"></i>
+                    <img id="profile-image" src="" alt="Victoria Mwende" style="display: none;">
+                </div>
+                <div class="photo-upload-btn">
+                    <label for="profile-upload" class="upload-label">
+                        <i class="fas fa-camera"></i> Upload Photo
+                    </label>
+                    <input type="file" id="profile-upload" accept="image/*" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm Victoria Mwende, a passionate Software Engineering student born in the beautiful Meru County. Currently in my second year at Kirinyaga University, I'm on a journey to master the art of creating impactful technology solutions.</p>
+                    <p>Growing up in Meru instilled in me values of hard work, community, and innovation. I believe technology should be accessible, inclusive, and designed to solve real-world problems, especially for communities like ours.</p>
+                    <p>When I'm not coding, you'll find me exploring Kenyan tech communities, mentoring younger students in STEM, or enjoying our beautiful Kenyan landscapes. I'm particularly interested in how technology can be leveraged for agricultural innovation and women's empowerment in tech.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">20</span>
+                            <span class="stat-label">Years Young</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2nd</span>
+                            <span class="stat-label">Year Student</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-interests">
+                    <h3>Current Passions</h3>
+                    <ul>
+                        <li><i class="fas fa-code"></i> Full-Stack Development</li>
+                        <li><i class="fas fa-seedling"></i> Agri-Tech Solutions</li>
+                        <li><i class="fas fa-female"></i> Women in Tech Advocacy</li>
+                        <li><i class="fas fa-mobile-alt"></i> Mobile App Development</li>
+                        <li><i class="fas fa-hands-helping"></i> Community Mentorship</li>
+                        <li><i class="fas fa-mountain"></i> Nature Exploration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section quick-links">
+        <div class="container">
+            <h2 class="section-title">Explore My World</h2>
+            <div class="link-cards">
+                <a href="childhood.html" class="link-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Meru Childhood</h3>
+                    <p>Growing up in beautiful Meru County</p>
+                </a>
+                <a href="education.html" class="link-card">
+                    <i class="fas fa-university"></i>
+                    <h3>University Journey</h3>
+                    <p>Kirinyaga University & Software Engineering</p>
+                </a>
+                <a href="skills.html" class="link-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Tech Skills</h3>
+                    <p>Coding, design & problem-solving</p>
+                </a>
+                <a href="future.html" class="link-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Future Dreams</h3>
+                    <p>Aspirations as a Kenyan tech leader</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Victoria Mwende</a>
+                    <p>Software Engineering Student | Kirinyaga University | From Meru With Love</p>
+                    <div class="footer-identity">
+                        <p><i class="fas fa-graduation-cap"></i> 2nd Year Software Engineering</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Meru County, Kenya</p>
+                        <p><i class="fas fa-birthday-cake"></i> Born: 2005</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="childhood.html">My Meru Childhood</a></li>
+                        <li><a href="education.html">University Life</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                       <li><a href="contact.html">Contact informatiob</a></a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/V-20-design" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/victoria-mwende" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/vicky_mwende" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/victoria.mwende" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> mwende.22625@student.kyu.ac.ke</p>
+                        <p><i class="fas fa-phone"></i> +254 792 196 024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2024</span> Victoria Mwende. All rights reserved. | Proudly Kenyan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

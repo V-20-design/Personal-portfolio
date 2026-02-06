@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Victoria | Let's Connect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Victoria</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="childhood.html">Childhood</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="future.html">Future</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Let's Connect!</h1>
+            <p>Get in touch for collaborations, opportunities, or just to say hello</p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="section contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2><i class="fas fa-comment-dots"></i> Get In Touch</h2>
+                    <p>I'm always excited to connect with fellow tech enthusiasts, potential collaborators, mentors, or anyone interested in my journey. Whether you have opportunities, advice, or just want to chat about technology and Kenya's growing tech scene, feel free to reach out!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>mwende.22625@student.kyu.ac.ke</p>
+                                <p>mwendevictoria283@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+254 792 196 024</p>
+                                <p>Available: Mon-Fri, 9AM-5PM EAT</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Kirinyaga University</p>
+                                <p>Meru County, Kenya</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>Student Hours</h4>
+                                <p>Best time to connect:</p>
+                                <p>Weekdays after 2PM EAT</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Photo Upload in Contact Page -->
+                    <div class="profile-upload-section">
+                        <h3><i class="fas fa-camera"></i> Update Your Profile Photo</h3>
+                        <div class="upload-preview">
+                            <div class="current-photo" id="contactProfileContainer">
+                                <i class="fas fa-user-circle" id="contactDefaultIcon"></i>
+                                <img id="contactProfileImage" src="" alt="Profile Photo" style="display: none;">
+                            </div>
+                            <div class="upload-controls">
+                                <label for="contact-profile-upload" class="upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i> Choose New Photo
+                                </label>
+                                <input type="file" id="contact-profile-upload" accept="image/*" style="display: none;">
+                                <p class="upload-note">Upload a professional photo for your contact profile</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Connect on Social Media</h3>
+                        <div class="social-icons-large">
+                            <a href="https://github.com/V-20-design" target="_blank" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/victoria-mwende" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/vicky_mwende" target="_blank" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/victoria.mwende" target="_blank" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://medium.com/@victoria-mwende" target="_blank" class="social-icon">
+                                <i class="fab fa-medium"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2><i class="fas fa-paper-plane"></i> Send Me a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="">Select a subject</option>
+                                <option value="collaboration">Project Collaboration</option>
+                                <option value="internship">Internship Opportunity</option>
+                                <option value="mentorship">Mentorship Request</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="advice">Career Advice</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" class="form-control" rows="6" placeholder="Tell me what's on your mind..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" checked>
+                                <span>Subscribe to my monthly newsletter about my tech journey</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                    
+                    <div class="response-time">
+                        <p><i class="fas fa-clock"></i> Typical response time: 24-48 hours</p>
+                        <p><i class="fas fa-star"></i> Priority given to: Mentorship requests, Kenyan tech opportunities</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map & Location -->
+            <div class="location-section">
+                <h2 class="section-title">My Locations</h2>
+                <div class="location-cards">
+                    <div class="location-card">
+                        <h3><i class="fas fa-university"></i> University Location</h3>
+                        <p><strong>Kirinyaga University</strong></p>
+                        <p>P.O Box 143-10300</p>
+                        <p>Kerugoya, Kenya</p>
+                        <p>Currently residing on campus</p>
+                    </div>
+                    <div class="location-card">
+                        <h3><i class="fas fa-home"></i> Home Town</h3>
+                        <p><strong>Meru County</strong></p>
+                        <p>Meru Town, Kenya</p>
+                        <p>Family home location</p>
+                        <p>Visit during holidays</p>
+                    </div>
+                    <div class="location-card">
+                        <h3><i class="fas fa-globe-africa"></i> Tech Community</h3>
+                        <p><strong>Active in:</strong></p>
+                        <p>• Nairobi Tech Meetups</p>
+                        <p>• Meru Developers Group</p>
+                        <p>• Kenya Women in Tech</p>
+                        <p>• East African Tech Forums</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Victoria Mwende</a>
+                    <p>Always open to new connections and opportunities</p>
+                    <div class="footer-identity">
+                        <p><i class="fas fa-heart"></i> Let's build Kenya's tech future together</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Connect</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="skills.html">My Skills</a></li>
+                        <li><a href="future.html">Future Goals</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Direct Contact</h4>
+                    <div class="contact-mini">
+                        <p><i class="fas fa-envelope"></i> mwendevictoria283@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +254 792 196 024</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2024</span> Victoria Mwende. Connect with purpose.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
